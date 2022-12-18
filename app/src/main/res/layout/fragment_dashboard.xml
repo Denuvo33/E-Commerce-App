@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.DashboardFragment">
+
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="#49D6EF"
+           android:orientation="horizontal">
+
+           <ImageView
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:src="@drawable/ic_baseline_account_circle_24"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="My email"
+                   android:textSize="17sp"
+                   android:textColor="@color/black"
+                   android:id="@+id/txtemail"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="My Name"
+                   android:textSize="17sp"
+                   android:textColor="@color/black"
+                   android:id="@+id/txtusername"/>
+
+           </LinearLayout>
+
+
+
+       </LinearLayout>
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="My Order"
+           android:textColor="@color/black"
+           android:textSize="16sp"
+           android:textStyle="bold"
+           android:layout_gravity="center"/>
+
+
+       <com.google.android.material.card.MaterialCardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="7dp"
+           app:cardCornerRadius="7dp">
+
+
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:orientation="horizontal">
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="1"
+                   android:id="@+id/txtpending"
+                   android:textColor="#FF0000"/>
+
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                   android:paddingRight="30dp"
+                   android:id="@+id/pending"
+                   android:orientation="vertical">
+
+                   <ImageView
+                       android:layout_width="60dp"
+                       android:layout_height="60dp"
+                       android:src="@drawable/box"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Pending"
+                       android:gravity="center"
+                       android:textColor="@color/black"/>
+
+
+               </LinearLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="1"
+                   android:id="@+id/txtexpress"
+                   android:textColor="#FF0000"/>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                   android:paddingRight="30dp"
+                   android:id="@+id/express"
+                   android:orientation="vertical">
+
+                   <ImageView
+                       android:layout_width="60dp"
+                       android:layout_height="60dp"
+                       android:src="@drawable/carbox"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="7dp"
+                       android:text="Express"
+                       android:gravity="center"
+                       android:textColor="@color/black"/>
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                   android:paddingRight="30dp"
+                   android:id="@+id/landed"
+                   android:orientation="vertical">
+
+                   <ImageView
+                       android:layout_width="60dp"
+                       android:layout_height="60dp"
+                       android:src="@drawable/rated"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Rate"
+                       android:layout_marginLeft="18dp"
+                       android:gravity="center"
+                       android:textColor="@color/black"/>
+
+
+               </LinearLayout>
+
+
+           </LinearLayout>
+
+
+
+       </com.google.android.material.card.MaterialCardView>
+
+       <com.google.android.material.card.MaterialCardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           app:cardBackgroundColor="#CACACC"
+           app:cardCornerRadius="5dp">
+
+
+
+
+
+       </com.google.android.material.card.MaterialCardView>
+
+       <com.google.android.material.card.MaterialCardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           app:cardBackgroundColor="#CACACC"
+           app:cardCornerRadius="5dp">
+
+
+
+
+
+
+
+       </com.google.android.material.card.MaterialCardView>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="My Product"
+           android:layout_gravity="center"
+           android:textColor="@color/black"/>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="40dp"
+           android:id="@+id/myrecycler"/>
+
+   </LinearLayout>
+
+</RelativeLayout>
+
+</ScrollView>
